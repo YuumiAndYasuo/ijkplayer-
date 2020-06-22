@@ -1,0 +1,2 @@
+include ':app', ':ijkplayer-java', ':ijkplayer-example', ':ijkplayer-exo'
+rootProject.name='MoviePro'

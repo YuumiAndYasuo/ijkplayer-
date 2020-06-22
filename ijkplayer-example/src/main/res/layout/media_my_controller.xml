@@ -1,0 +1,127 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#30000000"
+    android:orientation="vertical"
+    android:layoutDirection="ltr">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="4dip"
+        android:orientation="horizontal">
+        <SeekBar
+            android:id="@+id/mediacontroller_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="32dip"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true" />
+
+<!--        <ImageButton android:id="@+id/prev" style="@android:style/MediaButton.Previous" />&lt;!&ndash;上一集&ndash;&gt;-->
+<!--        <ImageButton android:id="@+id/rew" style="@android:style/MediaButton.Rew" />&lt;!&ndash;快退&ndash;&gt;-->
+<!--        <ImageButton android:id="@+id/pause" style="@android:style/MediaButton.Play" />&lt;!&ndash;播放/暂停&ndash;&gt;-->
+<!--        <ImageButton android:id="@+id/ffwd" style="@android:style/MediaButton.Ffwd" />&lt;!&ndash;快进&ndash;&gt;-->
+<!--        <ImageButton android:id="@+id/next" style="@android:style/MediaButton.Next" />&lt;!&ndash;下一集&ndash;&gt;-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+<!--        <ImageButton android:id="@+id/pause" style="@android:style/MediaButton.Play" android:layout_width="36dip" android:layout_height="25dip" />&lt;!&ndash;播放/暂停&ndash;&gt;-->
+
+<!--        <ImageButton android:id="@+id/pause" style="@style/MediaButton.Play" />&lt;!&ndash;播放/暂停&ndash;&gt;-->
+        <!--播放暂停按钮-->
+        <ImageButton
+            android:id="@+id/pause"
+            android:layout_width="36dip"
+            android:layout_height="25dip"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:layout_marginLeft="5dip"
+            android:layout_marginBottom="5dip"
+            android:src="@mipmap/play"
+            android:background="@null"/>
+
+        <!--当前时间/总时间-->
+        <LinearLayout
+            android:layout_width="80dip"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/time_current"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingTop="4dip"
+                android:paddingStart="4dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="4dip"
+                android:textColor="@color/ijk_transparent_dark" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingTop="4dip"
+                android:paddingStart="4dip"
+                android:layout_gravity="center_horizontal"
+                android:paddingEnd="4dip"
+                android:text="/"
+                android:textColor="@color/ijk_transparent_dark" />
+            <TextView android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingTop="4dip"
+                android:paddingEnd="4dip"
+                android:layout_gravity="center_horizontal"
+                android:paddingStart="4dip"
+                android:textColor="@color/ijk_transparent_dark" />
+        </LinearLayout>
+
+        <!--是否允许自动旋转-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="自动旋转"/>
+
+            <Switch
+                android:id="@+id/rotationSwitch"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:checked="true"/>
+        </LinearLayout>
+
+
+
+        <!--全屏按钮-->
+        <ImageButton
+            android:id="@+id/fullscreen"
+            android:layout_width="36dip"
+            android:layout_height="25dip"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:layout_marginBottom="5dip"
+            android:src="@mipmap/full_screen"
+            android:background="@null"/>
+    </LinearLayout>
+
+</LinearLayout>
